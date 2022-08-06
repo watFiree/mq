@@ -1,3 +1,5 @@
+import { Length } from "./rules";
+
 export enum Breakpoint {
   xs = "xs",
   sm = "sm",
@@ -7,7 +9,7 @@ export enum Breakpoint {
   xxl = "xxl",
 }
 
-export const BreakpointValues = {
+export const BreakpointValues: Record<Breakpoint, Length> = {
   [Breakpoint.xs]: "375px",
   [Breakpoint.sm]: "425px",
   [Breakpoint.md]: "768px",

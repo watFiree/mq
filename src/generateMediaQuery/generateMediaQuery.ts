@@ -1,4 +1,4 @@
-import { Rules, ruleKeys, RuleKeysEnum } from "../types/mq";
+import { Rules, ruleKeys, RuleKeysEnum } from "../types/rules";
 
 const mediaRule = "@media";
 

@@ -3,6 +3,7 @@ type Orientation = "landscape" | "portrait";
 type Pointer = "coarse" | "fine" | "none";
 type Hover = "hover" | "none";
 type ColorScheme = "light" | "dark";
+export type Length = `${number}${"px" | "%" | "rem" | "em" | "vw" | "vh"}`;
 
 export enum RuleKeysEnum {
   mediaType = "mediaType",
@@ -16,8 +17,8 @@ export enum RuleKeysEnum {
 
 export interface Rules {
   [RuleKeysEnum.mediaType]?: MediaType;
-  [RuleKeysEnum.minWidth]?: string;
-  [RuleKeysEnum.maxWidth]?: string;
+  [RuleKeysEnum.minWidth]?: Length;
+  [RuleKeysEnum.maxWidth]?: Length;
   [RuleKeysEnum.orientation]?: Orientation;
   [RuleKeysEnum.pointer]?: Pointer;
   [RuleKeysEnum.hover]?: Hover;
@@ -33,13 +34,3 @@ export const ruleKeys: Record<RuleKeysEnum, string> = {
   [RuleKeysEnum.hover]: "hover",
   [RuleKeysEnum.prefersColorScheme]: "prefers-color-scheme",
 };
-
-export const pointerFine = "@media (pointer: fine)";
-export const pointerCoarse = "@media (pointer: coarse)";
-export const pointerNone = "@media (pointer: none)";
-
-export const availableHover = "@media (hover: hover)";
-export const disabledHover = "@media (hover: none)";
-
-export const portrait = "@media (orientation: portrait)";
-export const landscape = "@media (orientation: landscape)";

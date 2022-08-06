@@ -1,6 +1,7 @@
 import { Breakpoint, BreakpointValues } from "./types/breakpoints";
-import { Rules } from "./types/mq";
+import { Rules } from "./types/rules";
 import generateMediaQuery from "./generateMediaQuery/generateMediaQuery";
+import * as additionalMethods from "./additionalMethods";
 
 const mq = {
   from: (minWidthBreakpoint: Breakpoint, restRules?: Omit<Rules, "minWidth">) =>
@@ -17,6 +18,7 @@ const mq = {
       minWidth: BreakpointValues[minWidthBreakpoint],
       maxWidth: BreakpointValues[maxWidthBreakpoint],
     }),
+  ...additionalMethods,
 };
 
 export default mq;
