@@ -33,4 +33,4 @@ export const ruleKeys: Record<RuleKeysEnum, string> = {
   [RuleKeysEnum.pointer]: "pointer",
   [RuleKeysEnum.hover]: "hover",
   [RuleKeysEnum.prefersColorScheme]: "prefers-color-scheme",
-};
+} as const;

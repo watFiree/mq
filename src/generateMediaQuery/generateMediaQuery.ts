@@ -1,22 +1,18 @@
-import { Rules, ruleKeys, RuleKeysEnum } from "../types/rules";
+import { Rules, ruleKeys } from "../types/rules";
+import { sortByCustomOrder, ObjectKeys } from "./helpers";
 
 const mediaRule = "@media";
 
 const generateMediaQuery = (rules: Rules) => {
-  const query = (Object.keys(rules) as Array<RuleKeysEnum>).reduce((condition, rule) => {
+  const sortedRuleKeys = sortByCustomOrder(ObjectKeys(rules), ObjectKeys(ruleKeys));
+  const query = sortedRuleKeys.reduce((condition, rule) => {
     const ruleKey = ruleKeys[rule];
     const ruleValue = rules[rule];
     const isFirstCondition = condition === mediaRule;
 
-    if (rule === RuleKeysEnum.mediaType) {
-      return `${condition} ${ruleValue}`;
-    }
+    const newCondition = ruleKey ? `(${ruleKey}: ${ruleValue})` : ruleValue;
 
-    if (isFirstCondition) {
-      return `${condition} (${ruleKey}: ${ruleValue})`;
-    }
-
-    return `${condition} and (${ruleKey}: ${ruleValue})`;
+    return `${condition} ${isFirstCondition ? "" : "and "}${newCondition}`;
   }, mediaRule);
 
   return query;

@@ -10,7 +10,7 @@ it("should options", () => {
     mq.from(Breakpoint.xl, {
       orientation: "landscape",
     })
-  ).toMatchInlineSnapshot(`"@media (orientation: landscape) and (min-width: 1440px)"`);
+  ).toMatchInlineSnapshot(`"@media (min-width: 1440px) and (orientation: landscape)"`);
 });
 
 it("should options media", () => {
