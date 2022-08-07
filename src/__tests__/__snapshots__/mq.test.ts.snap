@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mq returns object of methods 1`] = `
+Object {
+  "availableHover": "@media (hover: hover)",
+  "between": [Function],
+  "disabledHover": "@media (hover: none)",
+  "from": [Function],
+  "landscape": "@media (orientation: landscape)",
+  "pointerCoarse": "@media (pointer: coarse)",
+  "pointerFine": "@media (pointer: fine)",
+  "pointerNone": "@media (pointer: none)",
+  "portrait": "@media (orientation: portrait)",
+  "to": [Function],
+}
+`;

@@ -17,3 +17,5 @@ export const BreakpointValues: Record<Breakpoint, Length> = {
   [Breakpoint.xl]: "1440px",
   [Breakpoint.xxl]: "2560px",
 };
+
+export type BreakpointInput = `${Breakpoint}`;
