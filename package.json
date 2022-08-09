@@ -1,9 +1,12 @@
 {
-  "name": "mq",
+  "name": "@watfiree/mq",
   "version": "1.0.0",
   "type": "module",
   "main": "index.ts",
-  "repository": "https://github.com/watFiree/mq.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watFiree/mq.git"
+  },
   "scripts": {
     "build": "tsc src/**/*.ts",
     "test": "jest"
