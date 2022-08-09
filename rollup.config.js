@@ -5,7 +5,7 @@ import { terser } from 'rollup-plugin-terser'
 export default [
   // ES Modules
   {
-    input: 'src/mq.ts',
+    input: 'src/index.ts',
     output: {
       file: 'dist/index.es.js', format: 'es',
     },
@@ -17,7 +17,7 @@ export default [
 
   // UMD
   {
-    input: 'src/mq.ts',
+    input: 'src/index.ts',
     output: {
       file: 'dist/index.umd.min.js',
       format: 'umd',

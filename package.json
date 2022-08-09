@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "main": "dist/index.umd.min.js",
   "module": "dist/index.es.js",
-  "types": "dist/mq.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

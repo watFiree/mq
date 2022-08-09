@@ -19,9 +19,9 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "declaration": true
+    "declaration": true,
   },
   "include": [
     "./src"
-  ]
+  ],
 }
