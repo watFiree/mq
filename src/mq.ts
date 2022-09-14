@@ -8,7 +8,6 @@ const mq = {
     generateMediaQuery({ minWidth: BreakpointValues[minWidthBreakpoint], ...additionalRules }),
   to: (maxWidthBreakpoint: BreakpointInput, additionalRules?: Rules) =>
     generateMediaQuery({ maxWidth: BreakpointValues[maxWidthBreakpoint], ...additionalRules }),
-  // TODO: add check for breakpoints to not allow min width be greater than max
   between: (minWidthBreakpoint: BreakpointInput, maxWidthBreakpoint: BreakpointInput, additionalRules?: Rules) =>
     generateMediaQuery({
       minWidth: BreakpointValues[minWidthBreakpoint],

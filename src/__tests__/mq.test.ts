@@ -19,6 +19,10 @@ describe("mq", () => {
     expect(mq.between("sm", "xl")).toMatchInlineSnapshot(`"@media (min-width: 425px) and (max-width: 1440px)"`);
   });
 
+  it("mq.between -> should throw an error when min-width is greater than max-width", () => {
+    expect(() => mq.between("xl", "sm")).toThrow();
+  });
+
   it("should return media query with min-width and additional conditions", () => {
     expect(
       mq.from("xl", {

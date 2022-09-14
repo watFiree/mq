@@ -1,9 +1,10 @@
 import { Rules, ruleKeys } from "../types/rules";
-import { sortByCustomOrder, ObjectKeys } from "./helpers";
+import { sortByCustomOrder, ObjectKeys, validateRules } from "./helpers";
 
 const mediaRule = "@media";
 
 const generateMediaQuery = (rules: Rules) => {
+  validateRules(rules);
   const sortedRuleKeys = sortByCustomOrder(ObjectKeys(rules), ObjectKeys(ruleKeys));
   const query = sortedRuleKeys.reduce((condition, rule) => {
     const ruleKey = ruleKeys[rule];

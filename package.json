@@ -15,7 +15,8 @@
   "scripts": {
     "build:ts": "tsc src/**/*.ts",
     "build": "npx rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
