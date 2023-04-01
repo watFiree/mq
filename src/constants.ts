@@ -1,6 +1,6 @@
 import { Breakpoints, BreakpointValues } from "./types/breakpoints";
 import { RuleKeysEnum } from "./types/rules";
-
+console.log("test");
 export const breakpointValues: BreakpointValues = {
   [Breakpoints.xs]: "375px",
   [Breakpoints.sm]: "425px",
