@@ -1,4 +1,4 @@
-import mq from "../mq";
+import { defaultMq as mq } from "../mq/defaultMq";
 
 describe("mq", () => {
   it("returns object of methods", () => {

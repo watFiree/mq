@@ -24,13 +24,3 @@ export interface Rules {
   [RuleKeysEnum.hover]?: Hover;
   [RuleKeysEnum.prefersColorScheme]?: ColorScheme;
 }
-
-export const ruleKeys: Record<RuleKeysEnum, string> = {
-  [RuleKeysEnum.mediaType]: "",
-  [RuleKeysEnum.minWidth]: "min-width",
-  [RuleKeysEnum.maxWidth]: "max-width",
-  [RuleKeysEnum.orientation]: "orientation",
-  [RuleKeysEnum.pointer]: "pointer",
-  [RuleKeysEnum.hover]: "hover",
-  [RuleKeysEnum.prefersColorScheme]: "prefers-color-scheme",
-} as const;

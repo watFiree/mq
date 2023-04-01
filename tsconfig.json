@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
     "outDir": "./dist",
     "strict": true,
@@ -19,9 +16,7 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "declaration": true,
+    "declaration": true
   },
-  "include": [
-    "./src"
-  ],
+  "include": ["./src"]
 }

@@ -1,6 +1,6 @@
 import { Length } from "./rules";
 
-export enum Breakpoint {
+export enum Breakpoints {
   xs = "xs",
   sm = "sm",
   md = "md",
@@ -9,13 +9,6 @@ export enum Breakpoint {
   xxl = "xxl",
 }
 
-export const BreakpointValues: Record<Breakpoint, Length> = {
-  [Breakpoint.xs]: "375px",
-  [Breakpoint.sm]: "425px",
-  [Breakpoint.md]: "768px",
-  [Breakpoint.lg]: "1024px",
-  [Breakpoint.xl]: "1440px",
-  [Breakpoint.xxl]: "2560px",
-};
+export type BreakpointValues<T extends string = Breakpoints> = Record<T, Length>;
 
-export type BreakpointInput = `${Breakpoint}`;
+export type Breakpoint = `${Breakpoints}`;
