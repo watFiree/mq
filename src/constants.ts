@@ -1,5 +1,5 @@
-import { Breakpoints, BreakpointValues } from "types/breakpoints";
-import { RuleKeysEnum } from "types/rules";
+import { Breakpoints, BreakpointValues } from "./types/breakpoints";
+import { RuleKeysEnum } from "./types/rules";
 
 export const breakpointValues: BreakpointValues = {
   [Breakpoints.xs]: "375px",
